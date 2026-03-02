@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #FFF4E6, #ffe0cc);
+    color: #3A3A3A;
+    transition: 0.3s;
+}
+
+/* GECE MODU */
+body.dark {
+    background: linear-gradient(135deg, #2a1f1f, #1a1414);
+    color: #f5e6e6;
+}
+
+/* SİMLİ EFEKT */
+.glitter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: radial-gradient(white 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    animation: sparkle 6s linear infinite;
+}
+
+@keyframes sparkle {
+    from { transform: translateY(0); }
+    to { transform: translateY(-30px); }
+}
+
+.screen {
+    display: none;
+    padding: 40px;
+    text-align: center;
+}
+
+.active {
+    display: block;
+}
+
+h1 {
+    font-size: 40px;
+    color: #D96C6C;
+}
+
+button {
+    background-color: #F4A261;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e38b47;
+}
+
+.dark-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    border-radius: 50%;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.story-card {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+body.dark .story-card {
+    background: #3a2a2a;
+}
+
+.story-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.story-header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.empathy {
+    cursor: pointer;
+    margin-top: 10px;
+}
